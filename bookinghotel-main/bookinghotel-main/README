@@ -1,0 +1,60 @@
+//Nodermailer không cần quan tâm, tài khoản app password 
+để tạo môi trường app ảo cho việc gửi mail
+NodeMail= hai2k4z@gmail.com
+PASS= yggcjslsczdiejnm
+
+
+
+//Cài đặt cần thiết
+Môi trường xampp chạy giả lập môi trường website
+Tải về bật app khởi động chạy apache và sql
+
+NodeJS cài đặt các thư viện để chạy mailer xử lý gửi mail mã OTP về gmail
+Tải NodeJS, sử dụng command Prompt hoặc Terminal chạy các lệnh sau để cài đặt các thư viện
+Câu lệnh tạo folder mailer: mkdir mailer
+Chuyển file server.js vào foler giống cấu trúc ở README
+Câu lệnh cài đặt các thư viện cho việc chạy: 
+npm init -y
+npm install nodemailer cors express body-parser
+Câu lệnh để bật, chạy server.js ở port: node sever.js
+
+
+
+
+
+
+BookingHotel/
+├── index.php                     # Giao diện trang chủ
+├── loginregister.php             # Form đăng ký và đăng nhập
+├── logout.php                    # Xử lý đăng xuất (chỉ session và redirect)
+├── verify.php                    # Form nhập OTP để xác thực tài khoản
+├── verify_process.php            # Xử lý logic xác thực OTP
+├── resendotp.php                 # Xử lý logic gửi lại OTP
+├── search.php                    # Trang kết quả tìm kiếm
+├── detail.php                    # Trang chi tiết khách sạn (hiển thị thông tin, phòng trống)
+├── booking.php                   # Form đặt phòng (sau khi chọn phòng từ detail.php)
+├── payment.php                   # Trang xử lý và xác nhận thanh toán
+├── booking_success.php           # Trang thông báo đặt phòng/thanh toán thành công (hoặc thất bại)
+├──  my_bookings.php              # Trang lịch sử đặt phòng của người dùng
+└── autocomplete.php              # Xử lý logic gợi ý tự động (trả về JSON)
+│
+├── includes/
+│   ├── config.php                # Cấu hình kết nối database, các hằng số chung
+│   ├── header.php                # Header HTML dùng chung (bao gồm <head> và phần đầu <body>)
+│   └── footer.php                # Footer HTML dùng chung (bao gồm script JS và đóng </body>, </html>)
+│
+├── assets/
+│   ├── css/
+│   │   └── style.css             # File CSS chính
+│   ├── js/
+│   │   └── app.js                # JavaScript chính cho website (validate form, AJAX, slideshow,...)
+│   └── images/
+│       ├── momo_qr_sample.png    #QR MOMO của Nguyễn Đăng Hải, chuyển khoản để ủng hộ công sức project
+│       └── hotels/               # (Tùy chọn) Thư mục chứa ảnh của các khách sạn
+│           ├── hotel1.jpg
+│           └── hotel(n).jpg
+├── mailer/                       # Giữ nguyên nếu bạn dùng Node.js riêng cho email
+│   ├── server.js                 # Server Node.js cho gửi email
+│   └── ...                       # Các thư viện và file cấu hình khác của Node.js
+└── database.sql                     # Chứa các tệp SQL
+ 

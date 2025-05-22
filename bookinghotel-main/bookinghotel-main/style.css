@@ -1,0 +1,1239 @@
+/* Common Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  background: #f7f7f7;
+  min-height: 100vh; 
+  display: flex; 
+  flex-direction: column; 
+}
+
+.error-message {
+  color: red;
+  margin-bottom: 1rem;
+}
+
+/* ---------- Header Container ---------- */
+.navbar {
+  padding: 1rem 2rem;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* ---------- Logo ---------- */
+.logo {
+  font-size: 2rem;
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+/* ---------- Navigation Container ---------- */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* ---------- Chung cho các link ---------- */
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #007bff;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  background: rgba(0,123,255,0.1);
+  border-radius: 5px;
+}
+
+/* ---------- Auth Links ---------- */
+.auth-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Home Page */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/hero-bg.jpg');
+  background-size: cover;
+  padding: 4rem 1rem;
+  color: white;
+  text-align: center;
+}
+
+.search-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.9);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.search-form {
+  display: block;
+}
+
+.search-form .form-row {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 10px 0;
+}
+
+.form-group {
+  flex: 1;
+  min-width: 200px;
+  position: relative;
+}
+
+.input-with-icon {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 0 15px;
+}
+
+.input-with-icon i {
+  margin-right: 10px;
+  color: #666;
+}
+
+.input-with-icon input,
+.input-with-icon select {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  padding-left: 5px;
+  outline: none;
+}
+
+.input-with-icon input[type="date"]::-webkit-calendar-picker-indicator,
+.input-with-icon select {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.search-btn {
+  height: 48px;
+  padding: 0 30px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  white-space: nowrap;
+}
+.banner-image-after-hero {
+  max-width: 1000px;
+  margin-top: 2.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.92);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  box-sizing: border-box;
+}
+
+.banner-image-after-hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+
+.search-btn:hover {
+  background: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    flex-wrap: wrap;
+  }
+  
+  .form-group {
+    min-width: 100%;
+  }
+  
+  .search-btn {
+    width: 100%;
+  }
+}
+
+.featured-hotels {
+  padding: 4rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hotel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.hotel-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.hotel-image {
+  position: relative;
+  height: 200px;
+}
+
+.hotel-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hotel-rating {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.hotel-info {
+  padding: 1rem;
+}
+
+.hotel-price {
+  color: #007bff;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+/* Pagination Styles */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.pagination a {
+  color: #007bff;
+  padding: 0.5rem 0.75rem;
+  text-decoration: none;
+  border: 1px solid #dee2e6;
+  margin: 0 0.25rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination a:hover {
+  background-color: #e9ecef;
+  border-color: #ced4da;
+}
+
+.pagination a.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+  font-weight: bold;
+}
+
+.pagination a i {
+  font-size: 0.8rem;
+}
+/* Auth Pages */
+.auth-page {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.auth-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.auth-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #eee;
+}
+
+.auth-tab {
+  padding: 12px 24px;
+  cursor: pointer;
+  color: #666;
+  border-bottom: 3px solid transparent;
+}
+
+.auth-tab.active {
+  color: #007bff;
+  border-bottom-color: #007bff;
+}
+
+.auth-form {
+  display: none;
+}
+
+.auth-form.active {
+  display: block;
+}
+
+.auth-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.auth-btn {
+  width: 100%;
+  padding: 12px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Verify Page */
+.verify-page {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.verify-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.otp-inputs {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.otp-inputs input {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.countdown {
+  color: #666;
+  margin: 1rem 0;
+}
+
+/* FOOTER */
+footer {
+  background: #f8f9fa;
+  padding: 2rem 0;
+  margin-top: auto; 
+  width: 100%;
+}
+
+footer .container {
+  text-align: center; 
+  max-width: 1200px;
+  margin: 0 auto; 
+  padding: 0 15px; 
+}
+
+footer p {
+  color: #666;
+  margin: 0;
+  font-size: 0.9rem;
+  width: 100%; 
+}
+
+/* ========== SEARCH FILTERS ========== */
+.filter-sidebar {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  margin-right: 30px;
+}
+
+.filter-group {
+  margin-bottom: 25px;
+}
+
+.filter-title {
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #2c3e50;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 8px;
+}
+
+.price-range-input {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.price-range-input input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* ========== ROOM CARD ========== */
+.room-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.room-card:hover {
+  transform: translateY(-5px);
+}
+
+.room-type {
+  font-size: 1.2rem;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.room-capacity {
+  display: inline-block;
+  background: #e3f2fd;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.room-amenities {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.room-amenities li {
+  background: #f8f9fa;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* ========== DATE PICKER ========== */
+.flatpickr-calendar {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2)!important;
+  border-radius: 10px!important;
+}
+
+/* ========== RESPONSIVE GRID ========== */
+@media (max-width: 768px) {
+  .hotel-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+
+  .filter-sidebar {
+      margin-right: 0;
+      margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hotel-grid {
+      grid-template-columns: 1fr;
+  }
+
+  .price-range-input {
+      flex-direction: column;
+  }
+}
+
+/* ========== LOADING ANIMATION ========== */
+.loading-spinner {
+  display: none;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #007bff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 30px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/* === General Styles (Có thể bạn đã có hoặc cần điều chỉnh) === */
+body {
+    font-family: 'Arial', sans-serif; /* Hoặc font bạn ưa thích */
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f7f6; /* Màu nền trang nhẹ nhàng */
+    margin: 0;
+    padding: 0;
+}
+
+.container.content { /* Đảm bảo .content có padding nếu .container chỉ set max-width */
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+h1, h2, h3, h4 {
+    color: #2c3e50; /* Màu tiêu đề đậm hơn */
+    margin-top: 0;
+}
+h1 { font-size: 2.2em; margin-bottom: 20px; }
+h2 { font-size: 1.8em; margin-bottom: 15px; border-bottom: 2px solid #e0e0e0; padding-bottom: 10px;}
+h3 { font-size: 1.5em; margin-bottom: 10px; }
+h4 { font-size: 1.2em; margin-bottom: 8px; }
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 20px 0;
+}
+
+/* General Form Elements */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #555;
+}
+
+.form-control,
+.form-control-payment { 
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.form-control:focus,
+.form-control-payment:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+textarea.form-control {
+    min-height: 80px;
+    resize: vertical;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    font-weight: 500;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.btn i { margin-right: 6px; }
+
+.btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+.btn-primary:active, .btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+.btn-lg {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.15rem;
+}
+
+
+/* Error and Success Messages */
+.error-message, .success-message {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 0.95em;
+    border: 1px solid transparent;
+}
+.error-message {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+.error-message.main-error { /* Lỗi chung của trang, có thể bạn đã có */
+    text-align: center;
+}
+.success-message {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+.form-group.has-error .form-control {
+    border-color: #dc3545;
+}
+.form-group.has-error .error-text {
+    color: #dc3545;
+    font-size: 0.875em;
+    display: block;
+    margin-top: 5px;
+}
+
+
+/* === General Messages (Thêm hoặc cập nhật) === */
+.message {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 0.95em;
+    border: 1px solid transparent;
+}
+.message.error-message { /* Lỗi chung, lỗi validate form */
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+.message.error-message.main-error { /* Lỗi toàn cục, thường ở đầu trang */
+    text-align: center;
+    font-weight: bold;
+}
+.message.warning-message {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+.message.success-message {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+.form-validation-summary ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+/* === Detail Page (`detail.php`) === */
+.detail-page-container .container.content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+}
+.hotel-header-detail { text-align: center; margin-bottom: 25px; }
+.hotel-header-detail h1 { font-size: 2.4em; color: #2c3e50; margin-bottom: 8px; }
+.hotel-location-detail { font-size: 1.1em; color: #555; margin-bottom: 8px; }
+.hotel-rating-stars { font-size: 1em; color: #666; }
+.hotel-rating-stars .fa-star { color: #ffc107; }
+.hotel-rating-stars .fa-star-half-alt { color: #ffc107; } 
+.hotel-rating-stars .fa-reg.fa-star { color: #ccc; } 
+
+.hotel-main-content-detail { display: flex; flex-wrap: wrap; gap: 25px; margin-bottom: 25px; }
+.hotel-gallery-detail { flex: 1 1 55%; min-width: 300px; }
+.hotel-primary-image-detail { width: 100%; border-radius: 6px; object-fit: cover; max-height: 450px; border: 1px solid #eee;}
+.hotel-description-detail { flex: 1 1 40%; min-width: 280px; }
+.hotel-description-detail h2 { font-size: 1.5em; margin-bottom: 10px; color: #34495e; }
+.hotel-description-detail h2 i { margin-right: 8px; color: #3498db; }
+.hotel-description-detail p { line-height: 1.7; color: #454545; }
+
+.hotel-amenities-policies-detail { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-bottom: 30px; }
+.info-section-detail { background-color: #f9fafb; padding: 20px; border-radius: 6px; border: 1px solid #e7e7e7; }
+.info-section-detail h2 { font-size: 1.3em; margin-bottom: 12px; color: #34495e; }
+.info-section-detail h2 i { margin-right: 8px; color: #3498db; }
+.amenities-list-detail { list-style: none; padding-left: 0; column-count: 2; column-gap: 15px; }
+.amenities-list-detail li { padding: 3px 0; font-size: 0.9em; color: #555; }
+.amenities-list-detail li i { color: #27ae60; margin-right: 6px; }
+.policies-section-detail p { margin-bottom: 6px; font-size: 0.9em; line-height: 1.6; }
+.policies-section-detail p strong { color: #333; }
+
+.hotel-booking-action-detail { background-color: #e9f5ff; padding: 25px; border-radius: 8px; border: 1px solid #b3d7ff; text-align: center; }
+.hotel-booking-action-detail h2 { color: #0056b3; margin-bottom: 10px; }
+.hotel-booking-action-detail h2 i { margin-right: 8px; }
+.hotel-booking-action-detail p { margin-bottom: 20px; color: #333; }
+.view-rooms-form .form-row-detail { display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 15px; justify-content: center; }
+.view-rooms-form .form-group-detail { flex: 1; min-width: 200px; max-width: 250px; }
+.view-rooms-form .form-control-detail { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+.btn-proceed-booking-detail { margin-top: 15px; }
+
+
+/* === Booking Page (`booking.php`) === */
+.booking-page-container .container.content { background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.07); }
+.booking-page-container h2 { text-align: center; color: #0056b3; margin-bottom: 25px; }
+.booking-page-container h2 i { margin-right: 10px; }
+.booking-section { background-color: #f9fafb; padding: 20px; border-radius: 6px; border: 1px solid #e7e7e7; margin-bottom: 25px; }
+.booking-section h3 { font-size: 1.3em; color: #34495e; margin-bottom: 15px; padding-bottom: 8px; border-bottom: 1px solid #eee; }
+.booking-section h3 i { margin-right: 8px; color: #3498db; }
+.summary-section-booking p { margin-bottom: 8px; font-size: 0.95em; }
+.summary-section-booking p strong { color: #333; }
+.no-rooms-available-booking { color: #856404; background-color: #fff3cd; border-color: #ffeeba; padding: 10px; border-radius: 4px; }
+.form-group-booking { margin-bottom: 18px; }
+.form-group-booking label { display: block; font-weight: 500; margin-bottom: 5px; color: #444; }
+.form-control-booking { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+.form-group-booking.has-error .form-control-booking { border-color: #dc3545; }
+.error-text-booking { color: #dc3545; font-size: 0.85em; display: block; margin-top: 4px; }
+.price-highlight-booking { font-weight: bold; color: #28a745; font-size: 1.1em; }
+.payment-options-booking { display: flex; flex-direction: column; gap: 10px; }
+.payment-option-booking { background-color: #fff; padding: 12px 15px; border: 1px solid #ddd; border-radius: 5px; cursor: pointer; transition: border-color 0.2s, box-shadow 0.2s; }
+.payment-option-booking:hover { border-color: #007bff; box-shadow: 0 1px 4px rgba(0,123,255,0.15); }
+.payment-option-booking input[type="radio"] { margin-right: 8px; vertical-align: middle; }
+.payment-option-booking label { font-weight: normal; margin-bottom: 0; display: flex; align-items: center; cursor: pointer; }
+.payment-logo-booking { height: 24px; margin-right: 8px; margin-left: 5px; }
+.payment-icon-booking { margin-right: 8px; margin-left: 5px; color: #007bff; font-size: 1.2em; }
+.form-group-booking.has-error .payment-options-booking { border: 1px solid #dc3545; padding:10px; border-radius: 5px;} /* Highlight payment options if error */
+.btn-proceed-to-payment-booking { margin-top: 15px; }
+.btn-proceed-to-payment-booking:disabled { background-color: #ccc; border-color: #ccc; cursor: not-allowed; }
+
+
+/* === Payment Page (`payment.php`) === */
+.payment-page-container .container.content { background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.07); }
+.payment-page-container h2 { text-align: center; color: #0056b3; margin-bottom: 25px; }
+.payment-page-container h2 i { margin-right: 10px; }
+.booking-summary-payment-page { background-color: #f9fafb; padding: 20px; border-radius: 6px; border: 1px solid #e7e7e7; margin-bottom: 25px; }
+.booking-summary-payment-page h3 { font-size: 1.3em; color: #34495e; margin-bottom: 15px; }
+.booking-summary-payment-page h3 i { margin-right: 8px; color: #17a2b8; }
+.booking-summary-payment-page p { margin-bottom: 8px; font-size: 0.95em; }
+.total-price-payment-page { font-size: 1.3em; font-weight: bold; color: #28a745; margin-top: 10px; text-align: right; }
+.payment-interface-section { background-color: #f0f8ff; padding: 25px; border-radius: 6px; border: 1px solid #cce4ff; margin-bottom: 25px; }
+.payment-interface-section h3 { font-size: 1.3em; color: #004a99; margin-bottom: 15px; }
+.payment-interface-section h3 i { margin-right: 8px; }
+.payment-momo-interface, .payment-visa-interface, .payment-cod-interface { padding: 15px 0; }
+.momo-qr-image-payment { display: block; margin: 15px auto; max-width: 200px; border: 1px solid #ddd; border-radius: 4px; }
+.payment-instruction-text { font-size: 0.9em; color: #555; text-align: center; margin-top: 10px; }
+.form-group-payment { margin-bottom: 15px; }
+.form-group-payment label { display: block; font-weight: 500; margin-bottom: 5px; color: #444; }
+.form-control-payment { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+.form-row-payment { display: flex; gap: 15px; }
+.form-row-payment .col-half-payment { flex: 1; }
+.payment-cod-interface p { font-size: 1.05em; }
+.payment-cod-interface p i { color: #17a2b8; margin-right: 5px; }
+.btn-confirm-payment-final { margin-top: 20px; }
+.payment-note-secure { text-align: center; font-size: 0.85em; color: #666; margin-top: 20px; }
+.payment-note-secure i { color: #28a745; margin-right: 5px; }
+
+/* Responsive adjustments for all pages */
+@media (max-width: 992px) { /* Tablet */
+    .hotel-main-content-detail { flex-direction: column; }
+    .amenities-list-detail { column-count: 1; }
+    .hotel-amenities-policies-detail { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) { /* Mobile */
+    .detail-page-container .container.content,
+    .booking-page-container .container.content,
+    .payment-page-container .container.content { padding: 15px; }
+
+    .hotel-header-detail h1 { font-size: 2em; }
+    .info-section-detail h2, .booking-section h3, .payment-interface-section h3 { font-size: 1.2em; }
+
+    .view-rooms-form .form-row-detail { flex-direction: column; gap: 10px; }
+    .view-rooms-form .form-group-detail { max-width: 100%; }
+
+    .form-row-payment { flex-direction: column; gap: 0; } 
+    .form-row-payment .form-group-payment { margin-bottom: 15px; } 
+}
+.payment-form-error-text {
+    color: #dc3545;
+    font-size: 0.85em;
+    display: block;
+    margin-top: 4px;
+}
+
+/* === Booking Status Page (booking_success.php) - Handles both Success & Failure === */
+.booking-status-page-container .container.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    padding: 20px 15px;
+}
+
+.status-card {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1); 
+    text-align: center;
+    max-width: 680px; 
+    width: 100%;
+}
+
+.status-card.success-card-custom {
+    border-top: 6px solid #28a745; 
+}
+.status-card.failure-card-custom {
+    border-top: 6px solid #dc3545; 
+}
+
+.status-icon-custom {
+    font-size: 5em;
+    margin-bottom: 20px;
+}
+.success-card-custom .status-icon-custom {
+    color: #28a745;
+}
+.failure-card-custom .status-icon-custom {
+    color: #dc3545;
+}
+
+.status-card h2 {
+    font-size: 2.3em; 
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.status-main-message { 
+    font-size: 1.2em; 
+    color: #454545;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.booking-summary-status { 
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #e9e9e9;
+    border-left: 4px solid #007bff; 
+    border-radius: 6px;
+    text-align: left;
+    font-size: 0.95em;
+}
+.booking-summary-status.failure-details { 
+    border-left-color: #ffc107; 
+}
+
+.booking-summary-status h3 {
+    font-size: 1.25em; 
+    color: #0056b3;
+    margin-bottom: 12px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+}
+.booking-summary-status p {
+    margin-bottom: 8px;
+    color: #555;
+}
+.booking-summary-status p strong {
+    color: #333;
+    min-width: 180px; 
+    display: inline-block;
+}
+
+.status-actions-custom {
+    margin-top: 35px; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.status-actions-custom .btn {
+    padding: 12px 25px; 
+    font-size: 1.05em; 
+    text-decoration: none;
+    border-radius: 5px;
+    min-width: 200px; 
+}
+.status-actions-custom .btn i {
+    margin-right: 8px;
+}
+.status-actions-custom .btn.btn-warning { 
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #212529;
+}
+.status-actions-custom .btn.btn-warning:hover {
+    background-color: #e0a800;
+    border-color: #d39e00;
+}
+
+
+/* Responsive cho status card */
+@media (max-width: 768px) {
+    .status-card {
+        padding: 25px 20px;
+    }
+    .status-icon-custom {
+        font-size: 4em;
+    }
+    .status-card h2 {
+        font-size: 1.9em;
+    }
+    .status-main-message {
+        font-size: 1.1em;
+    }
+    .status-actions-custom .btn {
+        min-width: 100%; 
+        margin-bottom: 10px; 
+    }
+    .status-actions-custom .btn:last-child {
+        margin-bottom: 0;
+    }
+}
+/* === My Bookings Page (my_bookings.php) === */
+.my-bookings-page .container.content { 
+    background-color: #fff;
+    padding: 25px; 
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08); 
+}
+
+.my-bookings-page h2 {
+    text-align: center;
+    color: #0056b3; 
+    margin-bottom: 30px; 
+    font-size: 2em; 
+}
+.my-bookings-page h2 i {
+    margin-right: 12px;
+}
+
+.my-bookings-list {
+    display: grid; 
+    grid-template-columns: 1fr; 
+    gap: 25px; 
+}
+
+/* Nếu muốn 2 cột trên màn hình lớn hơn */
+@media (min-width: 992px) {
+    .my-bookings-list {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+@media (min-width: 1200px) {
+    
+}
+
+
+.my-booking-card {
+    background-color: #ffffff; 
+    border: 1px solid #e0e0e0; 
+    border-radius: 8px; 
+    padding: 20px;
+    display: flex;
+    flex-direction: column; 
+    gap: 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+.my-booking-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.my-booking-hotel-image {
+    flex-shrink: 0;
+    width: 100%; 
+    height: 180px; 
+    border-radius: 6px; 
+    overflow: hidden; 
+}
+
+.my-booking-hotel-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.my-booking-details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.my-booking-details h3 {
+    font-size: 1.5em; 
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #333;
+}
+.my-booking-details h3 a {
+    color: inherit; 
+    text-decoration: none;
+}
+.my-booking-details h3 a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.hotel-location-history {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 12px;
+}
+.hotel-location-history i {
+    margin-right: 5px;
+    color: #007bff;
+}
+
+.booking-card-divider {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 10px 0;
+}
+
+.my-booking-details p {
+    margin-bottom: 8px;
+    font-size: 0.95em; 
+    color: #333; 
+    line-height: 1.6;
+}
+
+.my-booking-details p strong {
+    color: #000; 
+    min-width: 120px; 
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.price-highlight-booking { 
+    font-weight: bold;
+    color: #c0392b; 
+    font-size: 1.1em;
+}
+
+/* CSS cho các trạng thái đơn hàng  */
+.status-confirmed { color: #27ae60; font-weight: bold; }
+.status-pending { color: #f39c12; font-weight: bold; }
+.status-cancelled { color: #c0392b; font-weight: bold; }
+.status-completed { color: #2980b9; font-weight: bold; }
+
+.booking-card-actions {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; 
+}
+.booking-card-actions .btn-sm { 
+    padding: 0.3rem 0.8rem;
+    font-size: 0.85rem;
+}
+
+
+.my-bookings-page .message.info-message { 
+    text-align: center;
+    padding: 25px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+}
+.my-bookings-page .message.info-message p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+.my-bookings-page .message.info-message .btn i {
+    margin-right: 6px;
+}
+
+
+/* Điều chỉnh layout card cho màn hình lớn hơn nếu muốn ảnh bên trái, nội dung bên phải */
+@media (min-width: 768px) {
+    .my-booking-card {
+        flex-direction: row; 
+        align-items: flex-start; 
+    }
+    .my-booking-hotel-image {
+        width: 180px; 
+        height: 150px; 
+    }
+}
+
+
+/* --- HEADER LAYOUT 2 DÒNG --- */
+.site-header-layout2 {
+    background-color: #fff; 
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08); 
+}
+
+.header-row-logo {
+    padding: 0.8rem 1.5rem; 
+    text-align: left; 
+}
+
+.logo-main-link {
+    text-decoration: none;
+}
+.logo-text-main {
+    font-size: 1.8rem; 
+    color: #007bff;   
+    margin: 0;        
+    font-weight: bold; 
+    line-height: 1.2;
+}
+
+.header-row-nav {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0.6rem 1.5rem; 
+    background-color: #f8f9fa; 
+    border-top: 1px solid #e9ecef; 
+   
+}
+
+.nav-left-section,
+.nav-right-section {
+    display: flex; 
+    align-items: center;
+}
+
+/* Style chung cho các item điều hướng trong .header-row-nav */
+.nav-item-main {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem; 
+    color: #007bff; 
+    text-decoration: none;
+    padding: 0.4rem 0.8rem; 
+    border-radius: 4px;
+    white-space: nowrap;
+    transition: background-color 0.2s, color 0.2s;
+}
+.nav-item-main:hover {
+    background-color: rgba(0,123,255,0.08); 
+    color: #0056b3;
+}
+.nav-item-main i {
+    font-size: 0.95em; 
+    line-height: 1;
+}
+.nav-item-text-main, 
+.user-action-link-text { 
+    font-size: 0.9em;
+}
+
+
+/* Khối chứa các link khi user ĐÃ đăng nhập */
+.user-actions-group {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem; 
+}
+
+/* Link tên người dùng */
+.user-profile-link .user-name-display {
+    font-weight: 500; 
+}
+
+/* Các link chỉ hiển thị icon trên desktop (Đơn hàng, Đăng xuất) */
+.user-action-link .user-action-link-text:not(.user-name-display) { 
+    display: none; 
+}
+.user-action-link.bookings-link i, 
+.user-action-link.logout-link i {   
+    font-size: 1.1em; 
+}
+
+
+
+/* ----- RESPONSIVE CHO HEADER 2 DÒNG ----- */
+@media (max-width: 768px) {
+    .header-row-logo {
+        padding: 0.6rem 1rem;
+        text-align: center; 
+    }
+    .logo-text-main {
+        font-size: 1.5rem;
+    }
+
+    .header-row-nav {
+        padding: 0.5rem 1rem;
+        flex-direction: column; 
+        align-items: flex-start; 
+        gap: 0.5rem; 
+    }
+
+    .nav-left-section,
+    .nav-right-section {
+        width: 100%; 
+    }
+    .nav-right-section {
+        justify-content: flex-end; 
+      
+    }
+    .navbar-auth-user-section, 
+    .user-actions-group {
+        width: 100%;
+        justify-content: space-between;
+       
+    }
+    .nav-item-text-main,
+    .user-action-link-text {
+        display: inline-block; 
+        font-size: 0.85em;
+    }
+    .nav-item-main {
+        gap: 0.4rem; 
+        padding: 0.5rem; 
+    }
+    .nav-item-main i {
+        font-size: 1em;
+    }
+}
